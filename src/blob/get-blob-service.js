@@ -3,7 +3,6 @@ import repromise from 'repromise';
 var svcCache = {};
 var nameChecked = {};
 
-export { getBlobService as default };
 export default function getBlobService(...params) {
   return repromise(()=>getBlobServicePromise(...params));
 }

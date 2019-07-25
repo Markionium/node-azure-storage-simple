@@ -2,7 +2,7 @@
   "name": "azure-storage-simple",
   "version": "1.0.0",
   "description": "Simplified Interfaces for Azure Storage Services (Tables, Queues, Blob)",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tracker1/node-azure-storage-simple.git"
@@ -26,6 +26,7 @@
     "COVERAGE_OPTS": "--statements 100 --functions 100 --branches 100 --lines 100"
   },
   "scripts": {
+    "build": "babel src --out-dir dist --presets=@babel/env",
     "clean": "rimraf ./dist",
     "lint": "eslint src",
     "test": "echo \"NO TESTS CONFIGURED\"",
@@ -34,6 +35,9 @@
     "publish-patch": "npm version patch && npm publish && git push origin master && git push --tags"
   },
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "eslint": "^4.19.1"
   },
   "dependencies": {
